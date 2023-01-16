@@ -1,11 +1,23 @@
-pipeline {
-    agent {
-        docker { image 'node:16.13.1-alpine' }
+pipeline { 
+    agent any 
+    options {
+        skipStagesAfterUnstable()
     }
     stages {
-        stage('Test') {
+        stage('Build') { 
+            steps { 
+                echo '---------Build 1' 
+            }
+        }
+        stage('Test'){
             steps {
-                sh 'node --version'
+                echo 'Testing'
+                sh 'ls -lha'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'docker version'
             }
         }
     }
