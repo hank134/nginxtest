@@ -19,7 +19,7 @@ pipeline {
         string(name: 'BITBUCKET_URL', defaultValue: 'https://github.com', description: 'URL Bitbucket')
         //     string(name: 'DOCKER_IMAGE_PATH', defaultValue: 'cicd_test_freestyle', description: 'Папка, куда будем выкладывать образ')
         // string(name: 'DOCKER_REGISTRY_HOST', defaultValue: '127.0.0.1:8083', description: 'host:port docker-репозитория, для ДЗО порт указывать не нужно')
-        string(name: 'TUZ_USER_PASS', defaultValue: 'jenkins_local', description: 'ТУЗ user/pass для доступа в Bitbucket и Nexus')
+        string(name: 'TUZ_USER_PASS', defaultValue: 'bc9247ef-4077-4a67-8e96-eaeb4136b0e9', description: 'ТУЗ user/pass для доступа в Bitbucket и Nexus')
     }
 
     environment {
