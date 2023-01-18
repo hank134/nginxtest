@@ -54,6 +54,19 @@ pipeline {
                 }
             }
         }
+        
+        stage('Checkout project') {
+            steps {
+                checkout([$class                           : 'GitSCM',
+                          branches                         : [[name: "${env.BRANCH}"]],
+                          doGenerateSubmoduleConfigurations: false,
+                          extensions                       : [],
+                          submoduleCfg                     : [],
+                          userRemoteConfigs                : [[credentialsId: "${env.TUZ_USER_PASS}", url: "${env.BITBUCKET_URL}/${env.BITBUCKET_PROJECT}/${env.BITBUCKET_REPOSITORY}.git"]]]
+                )
+            }
+
+        }
 
         stage('Build project') {
             steps {
