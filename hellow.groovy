@@ -72,7 +72,7 @@ pipeline {
 
     post {
         always {
-            sh "ls -lha"
+            sh "ls"
             echo '!!!!!!!!!!!!!!!BY!!!!!!!!!!!!!'
         }
     }
