@@ -1,10 +1,6 @@
 pipeline {
 
-    agent {
-        any
-//         label 'Linux_Default'
-    }
-
+    agent any
     options {
         timestamps()
         timeout(time: 1, unit: 'HOURS')
