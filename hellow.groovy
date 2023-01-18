@@ -1,8 +1,9 @@
 pipeline {
 
-//     agent {
+    agent {
+        any
 //         label 'Linux_Default'
-//     }
+    }
 
     options {
         timestamps()
