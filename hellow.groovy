@@ -75,7 +75,7 @@ pipeline {
                     echo ''
                     echo '------HELLO-------'
                     echo ''
-                    sh('kubectl --kubeconfig $MY_KUBECONFIG get pods')
+                    sh('kubectl --kubeconfig $MY_KUBECONFIG get pods -A')
                    // sh 'cat ${MY_KUBECONFIG}'
                 
                 }
