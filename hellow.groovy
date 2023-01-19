@@ -26,7 +26,7 @@ pipeline {
         BUILD_DISPLAY_NAME = "${env.BITBUCKET_PROJECT}/${env.BITBUCKET_REPOSITORY}-${env.BUILD_NUMBER}"
         // DOCKER_IMAGE_TAG = "${env.BITBUCKET_REPOSITORY}:${env.BUILD_NUMBER}"
         // DOCKER_IMAGE_NAME = "${env.DOCKER_REGISTRY_HOST}/${env.DOCKER_IMAGE_PATH}/${env.DOCKER_IMAGE_TAG}"
-        MY_KUBECONFIG = credentials('kubeconfigcloud')
+        MY_KUBECONFIG = credentials('Kubecfg')
     }
 
     stages {
